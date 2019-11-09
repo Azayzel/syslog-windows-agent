@@ -8,15 +8,15 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Threading;
 using System.Xml;
-using Jakl;
+using Jakkl;
 using MetroFramework.Forms;
 
-namespace Jakl
+namespace Jakkl
 {
 	/// <summary>
 	/// Summary description for Form1.
 	/// </summary>
-	public class JaklConfig : MetroForm
+	public class JakklConfig : MetroForm
 	{
 		private System.Windows.Forms.ContextMenu contextMenu;
 		private System.Windows.Forms.MenuItem menuItemConfigure;
@@ -52,7 +52,7 @@ namespace Jakl
         /// </summary>
         private System.ComponentModel.Container components = null;
 
-		public JaklConfig()
+		public JakklConfig()
 		{
 			//
 			// Required for Windows Form Designer support
@@ -86,7 +86,7 @@ namespace Jakl
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JaklConfig));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JakklConfig));
             this.contextMenu = new System.Windows.Forms.ContextMenu();
             this.menuItemConfigure = new System.Windows.Forms.MenuItem();
             this.menuItemVwr = new System.Windows.Forms.MenuItem();
@@ -328,7 +328,7 @@ namespace Jakl
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Jakl.Properties.Resources.jakl_sm;
+            this.pictureBox1.Image = global::Jakkl.Properties.Resources.Jakkl_sm;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(213, 7);
             this.pictureBox1.Name = "pictureBox1";
@@ -357,7 +357,7 @@ namespace Jakl
             this.testConnButton.Text = "Test";
             this.testConnButton.Click += new System.EventHandler(this.testConnButton_Click);
             // 
-            // JaklConfig
+            // JakklConfig
             // 
             this.AcceptButton = this.SaveButton;
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
@@ -384,10 +384,10 @@ namespace Jakl
             this.Controls.Add(this.SaveButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "JaklConfig";
+            this.Name = "JakklConfig";
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Jakl Configuration";
+            this.Text = "Jakkl Configuration";
             this.Load += new System.EventHandler(this.Config_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -402,7 +402,7 @@ namespace Jakl
 		[STAThread]
 		static void Main() 
 		{
-			Application.Run(new JaklConfig());
+			Application.Run(new JakklConfig());
 		}
 
 		private void SetInitValues()
@@ -567,7 +567,7 @@ namespace Jakl
         private string syslogport = "";
         private string syslogserver = "";
 		private string eventFilter = "";
-		private string tipText = "Jakl Event Monitoring to Syslog";
+		private string tipText = "Jakkl Event Monitoring to Syslog";
 		private Icon appIcon;
 		private NotifyIconEx notifyIconA;
 		private string logMessage = "";
@@ -720,7 +720,7 @@ namespace Jakl
 			if (logType == eventFilter || eventFilter.Length == 0)
 			{
 				// show balloon
-				NotifyIcon.ShowBalloon("Jakl",
+				NotifyIcon.ShowBalloon("Jakkl",
 					"An event was written to the "+logName+" event log."+
 					"\nType: "+LogType+
 					"\nSource: "+LogSource+

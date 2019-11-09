@@ -1,4 +1,4 @@
-﻿namespace Jakl.Syslog
+﻿namespace Jakkl.Syslog
 {
 	public enum Severity
 	{

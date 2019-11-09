@@ -1,2 +1,11 @@
-﻿# db.lock
+﻿# VS Profile
 .vs
+
+# Builds
+bin
+
+# Debug builds
+obj
+
+# Packages
+packages

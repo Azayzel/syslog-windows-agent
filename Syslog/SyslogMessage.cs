@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Jakl.Syslog
+namespace Jakkl.Syslog
 {
 	public class SyslogMessage
 	{

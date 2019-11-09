@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Jakl.Syslog
+namespace Jakkl.Syslog
 {
 	[Serializable]
 	public class SyslogNetException : Exception

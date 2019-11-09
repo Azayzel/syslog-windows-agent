@@ -9,14 +9,14 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ApplicationIcon>App.ico</ApplicationIcon>
     <AssemblyKeyContainerName />
-    <AssemblyName>Jakl</AssemblyName>
+    <AssemblyName>Jakkl</AssemblyName>
     <AssemblyOriginatorKeyFile />
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Jakl</RootNamespace>
+    <RootNamespace>Jakkl</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <StartupObject />
     <FileUpgradeFlags>
@@ -134,8 +134,8 @@
     <Compile Include="Syslog\Transport\SyslogTransportException.cs" />
     <Compile Include="Syslog\Transport\SyslogUdpSender.cs" />
     <Content Include="App.ico" />
-    <Content Include="jakl_sm.png" />
-    <Content Include="MetroFramework.txt" />
+    <Content Include="jakkl_sm.png" />
+    <Content Include="jakkl_syslog_windows.png" />
     <EmbeddedResource Include="Config.resx">
       <DependentUpon>Config.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,8 +149,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Build\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

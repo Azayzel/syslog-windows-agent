@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
-using Jakl.Syslog.Serialization;
+using Jakkl.Syslog.Serialization;
 
-namespace Jakl.Syslog.Transport
+namespace Jakkl.Syslog.Transport
 {
 	public class SyslogUdpSender : ISyslogMessageSender, IDisposable
 	{

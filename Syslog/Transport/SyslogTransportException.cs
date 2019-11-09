@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Jakl.Syslog.Transport
+namespace Jakkl.Syslog.Transport
 {
 	class SyslogTransportException : Exception
 	{

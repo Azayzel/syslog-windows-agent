@@ -4,7 +4,7 @@ using System.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 
-namespace Jakl.Syslog.Transport
+namespace Jakkl.Syslog.Transport
 {
 	public class SyslogEncryptedTcpSender : SyslogTcpSender
 	{

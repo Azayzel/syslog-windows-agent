@@ -6,11 +6,11 @@ using System.Runtime.CompilerServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("Jakl Event Monitoring")]
+[assembly: AssemblyTitle("Jakkl Event Monitoring")]
 [assembly: AssemblyDescription("Real-time Event Monitoring tool")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Jakl")]
+[assembly: AssemblyProduct("Jakkl - Syslog Windows Agent")]
 [assembly: AssemblyCopyright("2019 Josh Lavely")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		

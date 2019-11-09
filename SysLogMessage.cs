@@ -1,6 +1,6 @@
-﻿using Jakl.Syslog;
-using Jakl.Syslog.Serialization;
-using Jakl.Syslog.Transport;
+﻿using Jakkl.Syslog;
+using Jakkl.Syslog.Serialization;
+using Jakkl.Syslog.Transport;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 
-namespace Jakl
+namespace Jakkl
 {
     internal class Options
     {
@@ -121,14 +121,14 @@ namespace Jakl
                 ISyslogMessageSender sender = (ISyslogMessageSender)new SyslogTcpSender(options.SyslogServerHostname, options.SyslogServerPort, true);
                 
                 SyslogMessage msg1 = CreateSyslogMessage(options);
-                File.AppendAllText("C:\\jakl_log.txt", msg1.Facility.ToString() + msg1.Severity.ToString());
+                File.AppendAllText("C:\\Jakkl_log.txt", msg1.Facility.ToString() + msg1.Severity.ToString());
                 sender.Send(msg1, serializer);
                 return true;
             }
             catch (Exception e)
             {
                 Debug.WriteLine("ArgumentNullException: {0}", e);
-                File.AppendAllText("C:\\jakl_log.txt", e.Message);
+                File.AppendAllText("C:\\Jakkl_log.txt", e.Message);
                 return false;
             }
         }

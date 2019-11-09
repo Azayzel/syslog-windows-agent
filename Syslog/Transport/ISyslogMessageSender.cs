@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Jakl.Syslog.Serialization;
+using Jakkl.Syslog.Serialization;
 
-namespace Jakl.Syslog.Transport
+namespace Jakkl.Syslog.Transport
 {
 	public interface ISyslogMessageSender : IDisposable
 	{

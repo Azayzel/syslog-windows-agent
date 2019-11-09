@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace Jakl.Syslog.Serialization
+namespace Jakkl.Syslog.Serialization
 {
 	public interface ISyslogMessageSerializer
 	{

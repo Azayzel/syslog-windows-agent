@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Windows.Threading;
 using System.Reflection;
 
-namespace Jakl
+namespace Jakkl
 {
 	public class NotifyIconEx : System.ComponentModel.Component
 	{

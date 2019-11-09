@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using System.Linq;
 
-namespace Jakl.Syslog.Serialization
+namespace Jakkl.Syslog.Serialization
 {
 	public class SyslogRfc5424MessageSerializer : SyslogMessageSerializerBase, ISyslogMessageSerializer
 	{

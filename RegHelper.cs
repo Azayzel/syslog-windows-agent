@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Win32;
 
-namespace Jakl
+namespace Jakkl
 {
 	/// <summary>
 	/// Summary description for RegHelper.
@@ -45,16 +45,16 @@ namespace Jakl
 		{
 			RegistryKey key = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
 			if (!remove)
-				key.SetValue("Jakl", path);
+				key.SetValue("Jakkl", path);
 			else
-				key.DeleteValue("Jakl", false);
+				key.DeleteValue("Jakkl", false);
 			
 			key.Close();
 		}
 
 		private void SetKey()
 		{
-			RegistryKey key = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Jakl");
+			RegistryKey key = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Jakkl");
 			key.SetValue("WatchLog", "Application");
 			key.SetValue("Filter", "");
             key.SetValue("SyslogServer", "");
@@ -68,7 +68,7 @@ namespace Jakl
 		/// <param name="logName">Event log name</param>
 		public static void SetKey(string logName, string filter, string port, string syslogServer)
 		{
-			RegistryKey key = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Jakl");
+			RegistryKey key = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Jakkl");
 			key.SetValue("WatchLog", logName);
 			key.SetValue("Filter", filter);
             key.SetValue("SyslogPort", port);
@@ -86,7 +86,7 @@ namespace Jakl
 
 			try
 			{
-				key = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Jakl");
+				key = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Jakkl");
 				log = key.GetValue("WatchLog").ToString();
 				filter = key.GetValue("Filter").ToString();
                 _port = key.GetValue("SyslogPort").ToString();

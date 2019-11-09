@@ -4,9 +4,9 @@ using System.IO;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-using Jakl.Syslog.Serialization;
+using Jakkl.Syslog.Serialization;
 
-namespace Jakl.Syslog.Transport
+namespace Jakkl.Syslog.Transport
 {
 	public enum MessageTransfer {
 		OctetCounting		= 0,
@@ -45,7 +45,7 @@ namespace Jakl.Syslog.Transport
 				tcpClient = new TcpClient(hostname, port);
                 
 				transportStream = tcpClient.GetStream();
-                File.AppendAllText("C:\\jakl_log.txt", "Connected: " + tcpClient.Connected);
+                File.AppendAllText("C:\\Jakkl_log.txt", "Connected: " + tcpClient.Connected);
             }
 			catch
 			{

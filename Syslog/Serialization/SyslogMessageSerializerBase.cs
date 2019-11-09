@@ -1,4 +1,4 @@
-namespace Jakl.Syslog.Serialization
+namespace Jakkl.Syslog.Serialization
 {
 	public abstract class SyslogMessageSerializerBase
 	{
