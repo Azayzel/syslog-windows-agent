@@ -1,0 +1,14 @@
+D:\Development\SMX-Internal\Jakl\bin\Debug\Jakl.exe.config
+D:\Development\SMX-Internal\Jakl\bin\Debug\Jakl.exe
+D:\Development\SMX-Internal\Jakl\bin\Debug\Jakl.pdb
+D:\Development\SMX-Internal\Jakl\bin\Debug\MetroFramework.dll
+D:\Development\SMX-Internal\Jakl\bin\Debug\MetroFramework.Fonts.dll
+D:\Development\SMX-Internal\Jakl\obj\Debug\Jakl.JaklConfig.resources
+D:\Development\SMX-Internal\Jakl\obj\Debug\Jakl.NotifyIconEx.resources
+D:\Development\SMX-Internal\Jakl\obj\Debug\Jakl.Properties.Resources.resources
+D:\Development\SMX-Internal\Jakl\obj\Debug\Jakl.csproj.GenerateResource.cache
+D:\Development\SMX-Internal\Jakl\obj\Debug\Jakl.csproj.CoreCompileInputs.cache
+D:\Development\SMX-Internal\Jakl\obj\Debug\Jakl.csproj.CopyComplete
+D:\Development\SMX-Internal\Jakl\obj\Debug\Jakl.exe
+D:\Development\SMX-Internal\Jakl\obj\Debug\Jakl.pdb
+D:\Development\SMX-Internal\Jakl\obj\Debug\Jakl.csprojAssemblyReference.cache

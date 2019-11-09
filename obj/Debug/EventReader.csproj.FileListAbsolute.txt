@@ -1,0 +1,9 @@
+D:\Development\SMX-Internal\Jakl\obj\Debug\EventReader.csprojAssemblyReference.cache
+D:\Development\SMX-Internal\Jakl\bin\Debug\EventReader.exe
+D:\Development\SMX-Internal\Jakl\bin\Debug\EventReader.pdb
+D:\Development\SMX-Internal\Jakl\obj\Debug\EventReader.Config.resources
+D:\Development\SMX-Internal\Jakl\obj\Debug\JCMLib.NotifyIconEx.resources
+D:\Development\SMX-Internal\Jakl\obj\Debug\EventReader.csproj.GenerateResource.cache
+D:\Development\SMX-Internal\Jakl\obj\Debug\EventReader.csproj.CoreCompileInputs.cache
+D:\Development\SMX-Internal\Jakl\obj\Debug\EventReader.exe
+D:\Development\SMX-Internal\Jakl\obj\Debug\EventReader.pdb

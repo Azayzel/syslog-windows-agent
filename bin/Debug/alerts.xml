@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<alerts>
+  <alert time="11:25 PM" type="Information" category="(1)" source="Jakl" eventid="36456" user="">Testing</alert>
+  <alert time="11:28 PM" type="Information" category="(1)" source="Jakl" eventid="36456" user="">Testing</alert>
+  <alert time="11:30 PM" type="Information" category="(1)" source="Jakl" eventid="36456" user="">Testing</alert>
+  <alert time="8:41 AM" type="Information" category="(1)" source="Jakl" eventid="36456" user="">Testing</alert>
+  <alert time="8:41 AM" type="Information" category="(1)" source="Jakl" eventid="36456" user="">Testing</alert>
+  <alert time="8:41 AM" type="Information" category="(1)" source="Jakl" eventid="36456" user="">Testing</alert>
+  <alert time="8:41 AM" type="Information" category="(1)" source="Jakl" eventid="36456" user="">Testing</alert>
+  <alert time="8:41 AM" type="Information" category="(1)" source="Jakl" eventid="36456" user="">Testing</alert>
+  <alert time="8:49 AM" type="Information" category="(1)" source="Jakl" eventid="36456" user="">Testing</alert>
+  <alert time="8:49 AM" type="Information" category="(1)" source="Jakl" eventid="36456" user="">Testing</alert>
+  <alert time="8:52 AM" type="Information" category="(0)" source="Razer Chroma SDK Server" eventid="0" user="">The description for Event ID '0' in Source 'Razer Chroma SDK Server' cannot be found.  The local computer may not have the necessary registry information or message DLL files to display the message, or you may not have permission to access them.  The following information is part of the event:'Razer Chroma SDK Server', 'Service has resummed'</alert>
+  <alert time="8:52 AM" type="Information" category="(0)" source="Razer Chroma SDK Server" eventid="0" user="">The description for Event ID '0' in Source 'Razer Chroma SDK Server' cannot be found.  The local computer may not have the necessary registry information or message DLL files to display the message, or you may not have permission to access them.  The following information is part of the event:'Razer Chroma SDK Server', 'Service has resummed'</alert>
+  <alert time="8:52 AM" type="Information" category="(0)" source="Desktop Window Manager" eventid="1073750851" user="">The Desktop Window Manager has registered the session port.</alert>
+  <alert time="8:52 AM" type="Information" category="(0)" source="Desktop Window Manager" eventid="1073750851" user="">The Desktop Window Manager has registered the session port.</alert>
+  <alert time="8:53 AM" type="Information" category="(0)" source="Razer Chroma SDK Server" eventid="0" user="">The description for Event ID '0' in Source 'Razer Chroma SDK Server' cannot be found.  The local computer may not have the necessary registry information or message DLL files to display the message, or you may not have permission to access them.  The following information is part of the event:'Razer Chroma SDK Server', 'Service was paused'</alert>
+  <alert time="8:53 AM" type="Information" category="(0)" source="Razer Chroma SDK Server" eventid="0" user="">The description for Event ID '0' in Source 'Razer Chroma SDK Server' cannot be found.  The local computer may not have the necessary registry information or message DLL files to display the message, or you may not have permission to access them.  The following information is part of the event:'Razer Chroma SDK Server', 'Service was paused'</alert>
+  <alert time="8:59 AM" type="Information" category="Logging/Recovery" source="ESENT" eventid="300" user="">svchost (15960,R,98) DS_Token_DB: The database engine is initiating recovery steps.</alert>
+  <alert time="8:59 AM" type="Information" category="Logging/Recovery" source="ESENT" eventid="301" user="">svchost (15960,R,98) DS_Token_DB: The database engine has finished replaying logfile C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.log.
+
+
+
+Processing Stats: 
+[1] 0.012183 -0.004476 (19) CM -0.007891 (27) WT +J(CM:19, PgRf:53, Rd:0/19, Dy:1/8, Lg:43472/165) +M(C:0K, Fs:132, WS:388K # 324K, PF:408K # 340K, P:408K).
+
+Log record of type 'Insert   ' was seen most frequently (40 times)</alert>
+  <alert time="8:59 AM" type="Information" category="Logging/Recovery" source="ESENT" eventid="301" user="">svchost (15960,R,98) DS_Token_DB: The database engine has finished replaying logfile C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.log.
+
+
+
+Processing Stats: 
+[1] 0.012183 -0.004476 (19) CM -0.007891 (27) WT +J(CM:19, PgRf:53, Rd:0/19, Dy:1/8, Lg:43472/165) +M(C:0K, Fs:132, WS:388K # 324K, PF:408K # 340K, P:408K).
+
+Log record of type 'Insert   ' was seen most frequently (40 times)</alert>
+  <alert time="8:59 AM" type="Information" category="Logging/Recovery" source="ESENT" eventid="301" user="">svchost (15960,R,98) DS_Token_DB: The database engine has finished replaying logfile C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.log.
+
+
+
+Processing Stats: 
+[1] 0.012183 -0.004476 (19) CM -0.007891 (27) WT +J(CM:19, PgRf:53, Rd:0/19, Dy:1/8, Lg:43472/165) +M(C:0K, Fs:132, WS:388K # 324K, PF:408K # 340K, P:408K).
+
+Log record of type 'Insert   ' was seen most frequently (40 times)</alert>
+  <alert time="8:59 AM" type="Information" category="Logging/Recovery" source="ESENT" eventid="301" user="">svchost (15960,R,98) DS_Token_DB: The database engine has finished replaying logfile C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.log.
+
+
+
+Processing Stats: 
+[1] 0.012183 -0.004476 (19) CM -0.007891 (27) WT +J(CM:19, PgRf:53, Rd:0/19, Dy:1/8, Lg:43472/165) +M(C:0K, Fs:132, WS:388K # 324K, PF:408K # 340K, P:408K).
+
+Log record of type 'Insert   ' was seen most frequently (40 times)</alert>
+  <alert time="8:59 AM" type="Information" category="General" source="ESENT" eventid="105" user="">svchost (15960,D,0) DS_Token_DB: The database engine started a new instance (0). (Time=0 seconds)
+
+
+
+Additional Data:
+
+lgposV2[] = 00000009:0009:0000 - 00000009:000B:0B94 - 00000009:000C:0000 - 00000009:000C:0000 (00000000:0000:0000)
+cReInits = 2
+
+
+
+
+Internal Timing Sequence: 
+[1] 0.000316 +J(0) +M(C:0K, Fs:143, WS:560K # 560K, PF:2612K # 2612K, P:2612K)
+[2] 0.000151 +J(0) +M(C:8K, Fs:111, WS:436K # 436K, PF:1180K # 1180K, P:1180K)
+[3] 0.000006 +J(0) +M(C:0K, Fs:2, WS:8K # 8K, PF:64K # 64K, P:64K)
+[4] 0.000057 +J(0) +M(C:0K, Fs:56, WS:224K # 224K, PF:164K # 164K, P:164K)
+[5] 0.000401 +J(0) +M(C:0K, Fs:76, WS:300K # 300K, PF:24K # 24K, P:24K)
+[6] 0.001583 +J(0) +M(C:0K, Fs:41, WS:160K # 160K, PF:24K # 24K, P:24K)
+[7] 0.002013 -0.001118 (2) WT +J(0) +M(C:0K, Fs:27, WS:108K # 108K, PF:64K # 64K, P:64K)
+[8] 0.016564 -0.004476 (19) CM -0.009341 (31) WT +J(CM:19, PgRf:53, Rd:0/19, Dy:1/8, Lg:43472/165) +M(C:0K, Fs:189, WS:540K # 540K, PF:496K # 496K, P:496K)
+[9] 0.000273 +J(0) +M(C:0K, Fs:4, WS:16K # 16K, PF:0K # 0K, P:0K)
+[10] 0.000870 -0.000695 (1) WT +J(0) +M(C:0K, Fs:5, WS:-40K # 20K, PF:-4K # 56K, P:-4K)
+[11] 0.000019 +J(CM:0, PgRf:0, Rd:0/0, Dy:0/0, Lg:49/1) +M(C:0K, Fs:2, WS:8K # 0K, PF:0K # 0K, P:0K)
+[12] 0.003930 -0.002715 (2) WT +J(0) +M(C:0K, Fs:3, WS:12K # 0K, PF:0K # 0K, P:0K)
+[13] 0.016271 -0.000412 (2) CM -0.005403 (24) WT +J(CM:2, PgRf:2, Rd:0/2, Dy:0/0, Lg:8759/5) +M(C:0K, Fs:36, WS:16K # 40K, PF:-28K # 0K, P:-28K)
+[14] 0.000010 +J(0)
+[15] 0.000006 +J(0)
+[16] 0.000609 -0.000543 (1) WT +J(0) +M(C:0K, Fs:2, WS:0K # 0K, PF:0K # 0K, P:0K).</alert>
+  <alert time="8:59 AM" type="Information" category="General" source="ESENT" eventid="105" user="">svchost (15960,D,0) DS_Token_DB: The database engine started a new instance (0). (Time=0 seconds)
+
+
+
+Additional Data:
+
+lgposV2[] = 00000009:0009:0000 - 00000009:000B:0B94 - 00000009:000C:0000 - 00000009:000C:0000 (00000000:0000:0000)
+cReInits = 2
+
+
+
+
+Internal Timing Sequence: 
+[1] 0.000316 +J(0) +M(C:0K, Fs:143, WS:560K # 560K, PF:2612K # 2612K, P:2612K)
+[2] 0.000151 +J(0) +M(C:8K, Fs:111, WS:436K # 436K, PF:1180K # 1180K, P:1180K)
+[3] 0.000006 +J(0) +M(C:0K, Fs:2, WS:8K # 8K, PF:64K # 64K, P:64K)
+[4] 0.000057 +J(0) +M(C:0K, Fs:56, WS:224K # 224K, PF:164K # 164K, P:164K)
+[5] 0.000401 +J(0) +M(C:0K, Fs:76, WS:300K # 300K, PF:24K # 24K, P:24K)
+[6] 0.001583 +J(0) +M(C:0K, Fs:41, WS:160K # 160K, PF:24K # 24K, P:24K)
+[7] 0.002013 -0.001118 (2) WT +J(0) +M(C:0K, Fs:27, WS:108K # 108K, PF:64K # 64K, P:64K)
+[8] 0.016564 -0.004476 (19) CM -0.009341 (31) WT +J(CM:19, PgRf:53, Rd:0/19, Dy:1/8, Lg:43472/165) +M(C:0K, Fs:189, WS:540K # 540K, PF:496K # 496K, P:496K)
+[9] 0.000273 +J(0) +M(C:0K, Fs:4, WS:16K # 16K, PF:0K # 0K, P:0K)
+[10] 0.000870 -0.000695 (1) WT +J(0) +M(C:0K, Fs:5, WS:-40K # 20K, PF:-4K # 56K, P:-4K)
+[11] 0.000019 +J(CM:0, PgRf:0, Rd:0/0, Dy:0/0, Lg:49/1) +M(C:0K, Fs:2, WS:8K # 0K, PF:0K # 0K, P:0K)
+[12] 0.003930 -0.002715 (2) WT +J(0) +M(C:0K, Fs:3, WS:12K # 0K, PF:0K # 0K, P:0K)
+[13] 0.016271 -0.000412 (2) CM -0.005403 (24) WT +J(CM:2, PgRf:2, Rd:0/2, Dy:0/0, Lg:8759/5) +M(C:0K, Fs:36, WS:16K # 40K, PF:-28K # 0K, P:-28K)
+[14] 0.000010 +J(0)
+[15] 0.000006 +J(0)
+[16] 0.000609 -0.000543 (1) WT +J(0) +M(C:0K, Fs:2, WS:0K # 0K, PF:0K # 0K, P:0K).</alert>
+  <alert time="8:59 AM" type="Information" category="General" source="ESENT" eventid="326" user="">svchost (15960,D,50) DS_Token_DB: The database engine attached a database (1, C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat). (Time=0 seconds)
+
+
+
+Saved Cache: 1 0
+
+Additional Data: lgposAttach = 00000009:000E:0268
+
+
+
+Internal Timing Sequence: 
+[1] 0.000002 +J(0)
+[2] 0.000799 -0.000651 (1) WT +J(0) +M(C:0K, Fs:17, WS:4K # 4K, PF:4K # 0K, P:4K)
+[3] 0.006144 -0.001301 (8) WT +J(CM:0, PgRf:0, Rd:0/0, Dy:0/0, Lg:255/1) +M(C:0K, Fs:36, WS:128K # 68K, PF:44K # 0K, P:44K)
+[4] 0.000583 +J(0)
+[5] -
+[6] -
+[7] -
+[8] 0.000453 -0.000373 (2) CM -0.000333 (2) WT +J(CM:2, PgRf:2, Rd:4/2, Dy:0/0, Lg:0/0) +M(C:8K, Fs:2, WS:8K # 4K, PF:8K # 0K, P:8K)
+[9] 0.001086 -0.000980 (4) CM -0.000925 (4) WT +J(CM:4, PgRf:23, Rd:0/3, Dy:0/0, Lg:0/0) +M(C:20K, Fs:22, WS:88K # 88K, PF:216K # 184K, P:216K)
+[10] 0.000153 -0.000102 (1) CM -0.000083 (1) WT +J(CM:1, PgRf:40, Rd:0/1, Dy:0/0, Lg:0/0) +M(C:0K, Fs:4, WS:16K # 16K, PF:64K # 64K, P:64K)
+[11] 0.000007 +J(CM:0, PgRf:1, Rd:0/0, Dy:0/0, Lg:0/0) +M(C:0K, Fs:2, WS:8K # 8K, PF:0K # 0K, P:0K)
+[12] 0.000025 +J(CM:0, PgRf:42, Rd:0/0, Dy:0/0, Lg:0/0) +M(C:0K, Fs:5, WS:20K # 20K, PF:0K # 0K, P:0K)
+[13] 0.0 +J(0)
+[14] 0.0 +J(0)
+[15] 0.000002 +J(CM:0, PgRf:1, Rd:0/0, Dy:0/0, Lg:0/0).</alert>
+  <alert time="8:59 AM" type="Information" category="General" source="ESENT" eventid="326" user="">svchost (15960,D,50) DS_Token_DB: The database engine attached a database (1, C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat). (Time=0 seconds)
+
+
+
+Saved Cache: 1 0
+
+Additional Data: lgposAttach = 00000009:000E:0268
+
+
+
+Internal Timing Sequence: 
+[1] 0.000002 +J(0)
+[2] 0.000799 -0.000651 (1) WT +J(0) +M(C:0K, Fs:17, WS:4K # 4K, PF:4K # 0K, P:4K)
+[3] 0.006144 -0.001301 (8) WT +J(CM:0, PgRf:0, Rd:0/0, Dy:0/0, Lg:255/1) +M(C:0K, Fs:36, WS:128K # 68K, PF:44K # 0K, P:44K)
+[4] 0.000583 +J(0)
+[5] -
+[6] -
+[7] -
+[8] 0.000453 -0.000373 (2) CM -0.000333 (2) WT +J(CM:2, PgRf:2, Rd:4/2, Dy:0/0, Lg:0/0) +M(C:8K, Fs:2, WS:8K # 4K, PF:8K # 0K, P:8K)
+[9] 0.001086 -0.000980 (4) CM -0.000925 (4) WT +J(CM:4, PgRf:23, Rd:0/3, Dy:0/0, Lg:0/0) +M(C:20K, Fs:22, WS:88K # 88K, PF:216K # 184K, P:216K)
+[10] 0.000153 -0.000102 (1) CM -0.000083 (1) WT +J(CM:1, PgRf:40, Rd:0/1, Dy:0/0, Lg:0/0) +M(C:0K, Fs:4, WS:16K # 16K, PF:64K # 64K, P:64K)
+[11] 0.000007 +J(CM:0, PgRf:1, Rd:0/0, Dy:0/0, Lg:0/0) +M(C:0K, Fs:2, WS:8K # 8K, PF:0K # 0K, P:0K)
+[12] 0.000025 +J(CM:0, PgRf:42, Rd:0/0, Dy:0/0, Lg:0/0) +M(C:0K, Fs:5, WS:20K # 20K, PF:0K # 0K, P:0K)
+[13] 0.0 +J(0)
+[14] 0.0 +J(0)
+[15] 0.000002 +J(CM:0, PgRf:1, Rd:0/0, Dy:0/0, Lg:0/0).</alert>
+  <alert time="8:59 AM" type="Information" category="General" source="ESENT" eventid="326" user="">svchost (15960,D,50) DS_Token_DB: The database engine attached a database (1, C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat). (Time=0 seconds)
+
+
+
+Saved Cache: 1 0
+
+Additional Data: lgposAttach = 00000009:000E:0268
+
+
+
+Internal Timing Sequence: 
+[1] 0.000002 +J(0)
+[2] 0.000799 -0.000651 (1) WT +J(0) +M(C:0K, Fs:17, WS:4K # 4K, PF:4K # 0K, P:4K)
+[3] 0.006144 -0.001301 (8) WT +J(CM:0, PgRf:0, Rd:0/0, Dy:0/0, Lg:255/1) +M(C:0K, Fs:36, WS:128K # 68K, PF:44K # 0K, P:44K)
+[4] 0.000583 +J(0)
+[5] -
+[6] -
+[7] -
+[8] 0.000453 -0.000373 (2) CM -0.000333 (2) WT +J(CM:2, PgRf:2, Rd:4/2, Dy:0/0, Lg:0/0) +M(C:8K, Fs:2, WS:8K # 4K, PF:8K # 0K, P:8K)
+[9] 0.001086 -0.000980 (4) CM -0.000925 (4) WT +J(CM:4, PgRf:23, Rd:0/3, Dy:0/0, Lg:0/0) +M(C:20K, Fs:22, WS:88K # 88K, PF:216K # 184K, P:216K)
+[10] 0.000153 -0.000102 (1) CM -0.000083 (1) WT +J(CM:1, PgRf:40, Rd:0/1, Dy:0/0, Lg:0/0) +M(C:0K, Fs:4, WS:16K # 16K, PF:64K # 64K, P:64K)
+[11] 0.000007 +J(CM:0, PgRf:1, Rd:0/0, Dy:0/0, Lg:0/0) +M(C:0K, Fs:2, WS:8K # 8K, PF:0K # 0K, P:0K)
+[12] 0.000025 +J(CM:0, PgRf:42, Rd:0/0, Dy:0/0, Lg:0/0) +M(C:0K, Fs:5, WS:20K # 20K, PF:0K # 0K, P:0K)
+[13] 0.0 +J(0)
+[14] 0.0 +J(0)
+[15] 0.000002 +J(CM:0, PgRf:1, Rd:0/0, Dy:0/0, Lg:0/0).</alert>
+  <alert time="8:59 AM" type="Information" category="General" source="ESENT" eventid="326" user="">svchost (15960,D,50) DS_Token_DB: The database engine attached a database (1, C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat). (Time=0 seconds)
+
+
+
+Saved Cache: 1 0
+
+Additional Data: lgposAttach = 00000009:000E:0268
+
+
+
+Internal Timing Sequence: 
+[1] 0.000002 +J(0)
+[2] 0.000799 -0.000651 (1) WT +J(0) +M(C:0K, Fs:17, WS:4K # 4K, PF:4K # 0K, P:4K)
+[3] 0.006144 -0.001301 (8) WT +J(CM:0, PgRf:0, Rd:0/0, Dy:0/0, Lg:255/1) +M(C:0K, Fs:36, WS:128K # 68K, PF:44K # 0K, P:44K)
+[4] 0.000583 +J(0)
+[5] -
+[6] -
+[7] -
+[8] 0.000453 -0.000373 (2) CM -0.000333 (2) WT +J(CM:2, PgRf:2, Rd:4/2, Dy:0/0, Lg:0/0) +M(C:8K, Fs:2, WS:8K # 4K, PF:8K # 0K, P:8K)
+[9] 0.001086 -0.000980 (4) CM -0.000925 (4) WT +J(CM:4, PgRf:23, Rd:0/3, Dy:0/0, Lg:0/0) +M(C:20K, Fs:22, WS:88K # 88K, PF:216K # 184K, P:216K)
+[10] 0.000153 -0.000102 (1) CM -0.000083 (1) WT +J(CM:1, PgRf:40, Rd:0/1, Dy:0/0, Lg:0/0) +M(C:0K, Fs:4, WS:16K # 16K, PF:64K # 64K, P:64K)
+[11] 0.000007 +J(CM:0, PgRf:1, Rd:0/0, Dy:0/0, Lg:0/0) +M(C:0K, Fs:2, WS:8K # 8K, PF:0K # 0K, P:0K)
+[12] 0.000025 +J(CM:0, PgRf:42, Rd:0/0, Dy:0/0, Lg:0/0) +M(C:0K, Fs:5, WS:20K # 20K, PF:0K # 0K, P:0K)
+[13] 0.0 +J(0)
+[14] 0.0 +J(0)
+[15] 0.000002 +J(CM:0, PgRf:1, Rd:0/0, Dy:0/0, Lg:0/0).</alert>
+  <alert time="8:59 AM" type="Information" category="General" source="ESENT" eventid="326" user="">svchost (15960,D,50) DS_Token_DB: The database engine attached a database (1, C:\Windows\system32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat). (Time=0 seconds)
+
+
+
+Saved Cache: 1 0
+
+Additional Data: lgposAttach = 00000009:000E:0268
+
+
+
+Internal Timing Sequence: 
+[1] 0.000002 +J(0)
+[2] 0.000799 -0.000651 (1) WT +J(0) +M(C:0K, Fs:17, WS:4K # 4K, PF:4K # 0K, P:4K)
+[3] 0.006144 -0.001301 (8) WT +J(CM:0, PgRf:0, Rd:0/0, Dy:0/0, Lg:255/1) +M(C:0K, Fs:36, WS:128K # 68K, PF:44K # 0K, P:44K)
+[4] 0.000583 +J(0)
+[5] -
+[6] -
+[7] -
+[8] 0.000453 -0.000373 (2) CM -0.000333 (2) WT +J(CM:2, PgRf:2, Rd:4/2, Dy:0/0, Lg:0/0) +M(C:8K, Fs:2, WS:8K # 4K, PF:8K # 0K, P:8K)
+[9] 0.001086 -0.000980 (4) CM -0.000925 (4) WT +J(CM:4, PgRf:23, Rd:0/3, Dy:0/0, Lg:0/0) +M(C:20K, Fs:22, WS:88K # 88K, PF:216K # 184K, P:216K)
+[10] 0.000153 -0.000102 (1) CM -0.000083 (1) WT +J(CM:1, PgRf:40, Rd:0/1, Dy:0/0, Lg:0/0) +M(C:0K, Fs:4, WS:16K # 16K, PF:64K # 64K, P:64K)
+[11] 0.000007 +J(CM:0, PgRf:1, Rd:0/0, Dy:0/0, Lg:0/0) +M(C:0K, Fs:2, WS:8K # 8K, PF:0K # 0K, P:0K)
+[12] 0.000025 +J(CM:0, PgRf:42, Rd:0/0, Dy:0/0, Lg:0/0) +M(C:0K, Fs:5, WS:20K # 20K, PF:0K # 0K, P:0K)
+[13] 0.0 +J(0)
+[14] 0.0 +J(0)
+[15] 0.000002 +J(CM:0, PgRf:1, Rd:0/0, Dy:0/0, Lg:0/0).</alert>
+</alerts>
