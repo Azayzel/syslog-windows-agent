@@ -9,3 +9,12 @@ D:\Development\SMX-Internal\Jakl\obj\Release\Jakkl.csproj.GenerateResource.cache
 D:\Development\SMX-Internal\Jakl\obj\Release\Jakkl.csproj.CoreCompileInputs.cache
 D:\Development\SMX-Internal\Jakl\obj\Release\Jakkl.csproj.CopyComplete
 D:\Development\SMX-Internal\Jakl\obj\Release\Jakkl.exe
+D:\Development\SMX-Internal\Jakl\obj\Release\Jakkl.csprojAssemblyReference.cache
+D:\Development\SMX-Internal\Jakl\bin\Release\CheckComboBox.dll
+D:\Development\SMX-Internal\Jakl\bin\Release\FB.Mvc.CheckBoxList.dll
+D:\Development\SMX-Internal\Jakl\bin\Release\AdamsLair.WinForms.dll
+D:\Development\SMX-Internal\Jakl\bin\Release\PopupControl.dll
+D:\Development\SMX-Internal\Jakl\bin\Release\AdamsLair.WinForms.pdb
+D:\Development\SMX-Internal\Jakl\bin\Release\AdamsLair.WinForms.xml
+D:\Development\SMX-Internal\Jakl\bin\Release\PopupControl.pdb
+D:\Development\SMX-Internal\Jakl\bin\Release\FontAwesome.Sharp.dll

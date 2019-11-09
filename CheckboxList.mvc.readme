@@ -1,0 +1,36 @@
+﻿Follow these steps to start using CheckBoxList.mvc:
+
+1. Add SelectedItems and Items in your page model as below
+
+	public class YourPageModel
+	{
+
+		....
+		....
+
+		public List<long> SelectedItems{get; set;}
+		public SelectList Items {get; set;}
+	}
+
+2. Get your selecteditems and Items in your controller, like:
+	
+	public ActionResult Create()
+	{
+	    
+		//Logic create model with Items and SelectItems
+		.....
+		return View(model);
+	}
+
+
+
+3. Render CheckBoxList in the View: You can use Html helper extenstion:
+		
+		Reference FB.Mvc.CheckBoxList.UI in your view:
+		
+			@using FB.Mvc.CheckBoxList.UI
+
+		Render CheckBoxList:
+		    
+			@Html.CheckBoxListFor(model => model.SelectedItems, Model.Items, new { @class = "form-control", @Style="height:100px" })
+                        

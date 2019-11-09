@@ -1,5 +1,4 @@
 using System;
-using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -8,8 +7,14 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Threading;
 using System.Xml;
+using FontAwesome.Sharp;
 using Jakkl;
+using MetroFramework.Controls;
 using MetroFramework.Forms;
+using Icon = System.Drawing.Icon;
+using System.Drawing;
+using System.Windows.Media;
+using Color = System.Drawing.Color;
 
 namespace Jakkl
 {
@@ -44,8 +49,10 @@ namespace Jakkl
         private MetroFramework.Controls.MetroLabel syslogPortLabel;
         private MetroFramework.Controls.MetroTextBox _syslogPort;
         private PictureBox pictureBox1;
-        private TextBox textBox1;
         private MetroFramework.Controls.MetroButton testConnButton;
+        private MetroTextBox logsSelectedBox;
+        private ListBox logsCheckBox;
+        private IconPictureBox metroButton1;
 
         /// <summary>
         /// Required designer variable.
@@ -111,9 +118,12 @@ namespace Jakkl
             this.syslogPortLabel = new MetroFramework.Controls.MetroLabel();
             this._syslogPort = new MetroFramework.Controls.MetroTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.testConnButton = new MetroFramework.Controls.MetroButton();
+            this.logsSelectedBox = new MetroFramework.Controls.MetroTextBox();
+            this.logsCheckBox = new System.Windows.Forms.ListBox();
+            this.metroButton1 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenu
@@ -150,7 +160,7 @@ namespace Jakkl
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(182, 369);
+            this.SaveButton.Location = new System.Drawing.Point(182, 350);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(82, 23);
             this.SaveButton.TabIndex = 2;
@@ -160,7 +170,7 @@ namespace Jakkl
             // cancelButton
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(23, 369);
+            this.cancelButton.Location = new System.Drawing.Point(23, 350);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 3;
@@ -172,7 +182,7 @@ namespace Jakkl
             this.monitorLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.monitorLogs.FormattingEnabled = true;
             this.monitorLogs.ItemHeight = 23;
-            this.monitorLogs.Location = new System.Drawing.Point(23, 86);
+            this.monitorLogs.Location = new System.Drawing.Point(23, 379);
             this.monitorLogs.Name = "monitorLogs";
             this.monitorLogs.Size = new System.Drawing.Size(240, 29);
             this.monitorLogs.Sorted = true;
@@ -181,7 +191,7 @@ namespace Jakkl
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 54);
+            this.metroLabel1.Location = new System.Drawing.Point(23, 61);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(115, 19);
             this.metroLabel1.TabIndex = 7;
@@ -190,7 +200,7 @@ namespace Jakkl
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 138);
+            this.metroLabel2.Location = new System.Drawing.Point(23, 126);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(128, 19);
             this.metroLabel2.TabIndex = 8;
@@ -208,7 +218,7 @@ namespace Jakkl
             "Information",
             "SuccessAudit",
             "Warning"});
-            this._eventFilter.Location = new System.Drawing.Point(23, 161);
+            this._eventFilter.Location = new System.Drawing.Point(23, 149);
             this._eventFilter.Name = "_eventFilter";
             this._eventFilter.Size = new System.Drawing.Size(240, 29);
             this._eventFilter.Sorted = true;
@@ -220,7 +230,7 @@ namespace Jakkl
             this.runOnStartup.Checked = true;
             this.runOnStartup.CheckState = System.Windows.Forms.CheckState.Checked;
             this.runOnStartup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.runOnStartup.Location = new System.Drawing.Point(183, 286);
+            this.runOnStartup.Location = new System.Drawing.Point(183, 273);
             this.runOnStartup.Name = "runOnStartup";
             this.runOnStartup.Size = new System.Drawing.Size(80, 17);
             this.runOnStartup.TabIndex = 8;
@@ -231,7 +241,7 @@ namespace Jakkl
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(23, 286);
+            this.metroLabel3.Location = new System.Drawing.Point(23, 273);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(103, 19);
             this.metroLabel3.TabIndex = 11;
@@ -268,7 +278,7 @@ namespace Jakkl
             // _saveSettingsLabel
             // 
             this._saveSettingsLabel.AutoSize = true;
-            this._saveSettingsLabel.Location = new System.Drawing.Point(23, 318);
+            this._saveSettingsLabel.Location = new System.Drawing.Point(23, 305);
             this._saveSettingsLabel.Name = "_saveSettingsLabel";
             this._saveSettingsLabel.Size = new System.Drawing.Size(88, 19);
             this._saveSettingsLabel.TabIndex = 12;
@@ -280,7 +290,7 @@ namespace Jakkl
             this._saveSettings1.Checked = true;
             this._saveSettings1.CheckState = System.Windows.Forms.CheckState.Checked;
             this._saveSettings1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this._saveSettings1.Location = new System.Drawing.Point(183, 320);
+            this._saveSettings1.Location = new System.Drawing.Point(183, 307);
             this._saveSettings1.Name = "_saveSettings1";
             this._saveSettings1.Size = new System.Drawing.Size(80, 17);
             this._saveSettings1.TabIndex = 13;
@@ -290,7 +300,7 @@ namespace Jakkl
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(23, 207);
+            this.metroLabel4.Location = new System.Drawing.Point(23, 195);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(92, 19);
             this.metroLabel4.TabIndex = 14;
@@ -299,7 +309,7 @@ namespace Jakkl
             // syslogServer
             // 
             this.syslogServer.CustomBackground = true;
-            this.syslogServer.Location = new System.Drawing.Point(26, 229);
+            this.syslogServer.Location = new System.Drawing.Point(26, 217);
             this.syslogServer.Name = "syslogServer";
             this.syslogServer.Size = new System.Drawing.Size(125, 23);
             this.syslogServer.TabIndex = 15;
@@ -309,7 +319,7 @@ namespace Jakkl
             // syslogPortLabel
             // 
             this.syslogPortLabel.AutoSize = true;
-            this.syslogPortLabel.Location = new System.Drawing.Point(161, 207);
+            this.syslogPortLabel.Location = new System.Drawing.Point(161, 195);
             this.syslogPortLabel.Name = "syslogPortLabel";
             this.syslogPortLabel.Size = new System.Drawing.Size(37, 19);
             this.syslogPortLabel.TabIndex = 16;
@@ -320,7 +330,7 @@ namespace Jakkl
             // 
             this._syslogPort.BackColor = System.Drawing.SystemColors.Window;
             this._syslogPort.CustomBackground = true;
-            this._syslogPort.Location = new System.Drawing.Point(161, 229);
+            this._syslogPort.Location = new System.Drawing.Point(161, 217);
             this._syslogPort.Name = "_syslogPort";
             this._syslogPort.Size = new System.Drawing.Size(43, 23);
             this._syslogPort.TabIndex = 17;
@@ -330,43 +340,71 @@ namespace Jakkl
             // 
             this.pictureBox1.Image = global::Jakkl.Properties.Resources.Jakkl_sm;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(213, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(202, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(39, 259);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(209, 13);
-            this.textBox1.TabIndex = 19;
-            this.textBox1.Visible = false;
-            // 
             // testConnButton
             // 
-            this.testConnButton.Location = new System.Drawing.Point(210, 229);
+            this.testConnButton.Location = new System.Drawing.Point(210, 217);
             this.testConnButton.Name = "testConnButton";
             this.testConnButton.Size = new System.Drawing.Size(54, 23);
             this.testConnButton.TabIndex = 20;
             this.testConnButton.Text = "Test";
             this.testConnButton.Click += new System.EventHandler(this.testConnButton_Click);
             // 
+            // logsSelectedBox
+            // 
+            this.logsSelectedBox.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
+            this.logsSelectedBox.Location = new System.Drawing.Point(26, 85);
+            this.logsSelectedBox.Name = "logsSelectedBox";
+            this.logsSelectedBox.Size = new System.Drawing.Size(178, 23);
+            this.logsSelectedBox.TabIndex = 22;
+            this.logsSelectedBox.Click += new System.EventHandler(this.metroTextBox1_Click_1);
+            // 
+            // logsCheckBox
+            // 
+            this.logsCheckBox.FormattingEnabled = true;
+            this.logsCheckBox.Location = new System.Drawing.Point(26, 114);
+            this.logsCheckBox.Name = "logsCheckBox";
+            this.logsCheckBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.logsCheckBox.Size = new System.Drawing.Size(216, 95);
+            this.logsCheckBox.Sorted = true;
+            this.logsCheckBox.TabIndex = 25;
+            this.logsCheckBox.Visible = false;
+            this.logsCheckBox.MouseLeave += new System.EventHandler(this.Close_ListBox);
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.metroButton1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.metroButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.metroButton1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.metroButton1.IconSize = 23;
+            this.metroButton1.Location = new System.Drawing.Point(210, 85);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(32, 23);
+            this.metroButton1.TabIndex = 26;
+            this.metroButton1.TabStop = false;
+            this.metroButton1.Click += new System.EventHandler(this.ShowLogsCheckBox);
+            this.metroButton1.MouseHover += new System.EventHandler(this.ShowLogsCheckBox);
+            // 
             // JakklConfig
             // 
             this.AcceptButton = this.SaveButton;
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(293, 415);
+            this.ClientSize = new System.Drawing.Size(293, 388);
             this.ContextMenu = this.contextMenu;
             this.ControlBox = false;
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.logsCheckBox);
+            this.Controls.Add(this.logsSelectedBox);
             this.Controls.Add(this.testConnButton);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this._syslogPort);
             this.Controls.Add(this.syslogPortLabel);
@@ -387,9 +425,10 @@ namespace Jakkl
             this.Name = "JakklConfig";
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Jakkl Configuration";
+            this.Text = "Jakkl Config";
             this.Load += new System.EventHandler(this.Config_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,19 +461,35 @@ namespace Jakkl
 			this.WindowState = FormWindowState.Minimized;
 			this.Hide();
 
+            this.metroButton1.Image = IconChar.AngleDown.ToBitmap(22, Color.Black);
+
+            if (!string.IsNullOrEmpty(watchLog))
+            {
+                this.logsSelectedBox.Text = "Not Listening to Logs. Set logs to watch.";
+            }
+            this.logsSelectedBox.Text = watchLog;
+
 			// populate monitorLogs with available event logs
 			ArrayList alLogs = GetAvailEventLogs();
 			foreach (EventLog log in GetAvailEventLogs())
 			{
                 MetroFramework.Controls.MetroCheckBox checkBox = new MetroFramework.Controls.MetroCheckBox();
                 checkBox.Text = log.LogDisplayName;
-                ListViewItem lItem = new ListViewItem();
-                lItem.Text = log.LogDisplayName;
-                monitorLogs.Items.Add(log.LogDisplayName);
-                monitorLogs.SelectedIndex = 0;
-			}
-		
-			NotifyIcon = new NotifyIconEx();
+
+                MetroFramework.Controls.MetroLabel label =  new MetroLabel();
+                label.Text = log.LogDisplayName;
+
+                FlowLayoutPanel panel = new FlowLayoutPanel();
+                panel.FlowDirection = FlowDirection.TopDown;
+                panel.Controls.Add(checkBox);
+                panel.Controls.Add(label);
+                monitorLogs.Items.Add(panel);
+                logsCheckBox.Items.Add(log.LogDisplayName);
+            }
+
+            monitorLogs.SelectedIndex = 0;
+
+            NotifyIcon = new NotifyIconEx();
 			NotifyIcon.Icon = this.appIcon;
 			NotifyIcon.Text = tipText+"("+watchLog+")";
 			NotifyIcon.Visible = true;
@@ -449,13 +504,17 @@ namespace Jakkl
 			// add event handlers
 			NotifyIcon.BalloonClick += new EventHandler(OnClickBalloon);
 			NotifyIcon.DoubleClick += new EventHandler(OnDoubleClickIcon);
-		}
 
-		/// <summary>
-		/// Retrieves available event logs on the local machine
-		/// </summary>
-		/// <returns>ArrayList of available EventLog objects</returns>
-		private ArrayList GetAvailEventLogs()
+           
+                    
+        }
+        
+
+        /// <summary>
+        /// Retrieves available event logs on the local machine
+        /// </summary>
+        /// <returns>ArrayList of available EventLog objects</returns>
+        private ArrayList GetAvailEventLogs()
 		{
 			ArrayList alLogs = new ArrayList();
 			foreach (EventLog log in EventLog.GetEventLogs())
@@ -797,9 +856,39 @@ namespace Jakkl
 
         public void testConnButton_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine(_syslogPort.Text, syslogServer.Text);
             SysLogMessage sysLog = new SysLogMessage();
-            sysLog.TestConnect("10.0.2.9", "514");
+            sysLog.TestConnect(syslogServer.Text, _syslogPort.Text);
+        }
+
+        private void metroTextBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            if (logsCheckBox.Visible)
+            {
+                this.metroButton1.Image = IconChar.AngleDown.ToBitmap(22, Color.Black);
+                this.logsCheckBox.Visible = false;
+            }
+            else
+            {
+                this.metroButton1.Image = IconChar.AngleUp.ToBitmap(22, Color.Black);
+                this.logsCheckBox.Visible = true;
+            }
+        }
+
+        private void Close_ListBox(object sender, EventArgs e)
+        {
+            this.metroButton1.Image = IconChar.AngleDown.ToBitmap(22, Color.Black);
+            this.logsCheckBox.Visible = false;
+        }
+
+        private void ShowLogsCheckBox(object sender, EventArgs e)
+        {
+            this.metroButton1.Image = IconChar.AngleUp.ToBitmap(22, Color.Black);
+            this.logsCheckBox.Visible = true;
         }
     }
 }

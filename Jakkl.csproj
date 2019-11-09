@@ -70,6 +70,18 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AdamsLair.WinForms, Version=1.1.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AdamsLair.WinForms.1.1.17\lib\net45\AdamsLair.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="CheckComboBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Common.CheckComboBox.1.0.0\lib\CheckComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="FB.Mvc.CheckBoxList, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CheckboxList.Mvc.FB.1.0.0\lib\net45\FB.Mvc.CheckBoxList.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.8.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.8.3\lib\net40\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
     </Reference>
@@ -80,6 +92,11 @@
     <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="PopupControl, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AdamsLair.WinForms.PopupControl.1.0.1\lib\net40\PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -92,6 +109,7 @@
     <Reference Include="System.Windows.Forms">
       <Name>System.Windows.Forms</Name>
     </Reference>
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
@@ -151,6 +169,7 @@
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include="app.config" />
+    <None Include="CheckboxList.mvc.readme" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
