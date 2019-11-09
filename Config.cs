@@ -30,10 +30,8 @@ namespace Jakkl
 		private System.Windows.Forms.MenuItem menuItem2;
         private MetroFramework.Controls.MetroButton SaveButton;
         private MetroFramework.Controls.MetroButton cancelButton;
-        private MetroFramework.Controls.MetroComboBox monitorLogs;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroComboBox _eventFilter;
         private MetroFramework.Controls.MetroToggle runOnStartup;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroRadioButton _saveSettings;
@@ -53,6 +51,9 @@ namespace Jakkl
         private MetroTextBox logsSelectedBox;
         private ListBox logsCheckBox;
         private IconPictureBox metroButton1;
+        private IconPictureBox iconPictureBox1;
+        private MetroTextBox filterTextBox;
+        private ListBox _eventFilter;
 
         /// <summary>
         /// Required designer variable.
@@ -101,10 +102,8 @@ namespace Jakkl
             this.menuItemExit = new System.Windows.Forms.MenuItem();
             this.SaveButton = new MetroFramework.Controls.MetroButton();
             this.cancelButton = new MetroFramework.Controls.MetroButton();
-            this.monitorLogs = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this._eventFilter = new MetroFramework.Controls.MetroComboBox();
             this.runOnStartup = new MetroFramework.Controls.MetroToggle();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this._saveSettings = new MetroFramework.Controls.MetroRadioButton();
@@ -122,8 +121,12 @@ namespace Jakkl
             this.logsSelectedBox = new MetroFramework.Controls.MetroTextBox();
             this.logsCheckBox = new System.Windows.Forms.ListBox();
             this.metroButton1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.filterTextBox = new MetroFramework.Controls.MetroTextBox();
+            this._eventFilter = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenu
@@ -177,17 +180,6 @@ namespace Jakkl
             this.cancelButton.Text = "Cancel";
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // monitorLogs
-            // 
-            this.monitorLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.monitorLogs.FormattingEnabled = true;
-            this.monitorLogs.ItemHeight = 23;
-            this.monitorLogs.Location = new System.Drawing.Point(23, 379);
-            this.monitorLogs.Name = "monitorLogs";
-            this.monitorLogs.Size = new System.Drawing.Size(240, 29);
-            this.monitorLogs.Sorted = true;
-            this.monitorLogs.TabIndex = 6;
-            // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
@@ -205,24 +197,6 @@ namespace Jakkl
             this.metroLabel2.Size = new System.Drawing.Size(128, 19);
             this.metroLabel2.TabIndex = 8;
             this.metroLabel2.Text = "Filter by event types:";
-            // 
-            // _eventFilter
-            // 
-            this._eventFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this._eventFilter.FormattingEnabled = true;
-            this._eventFilter.ItemHeight = 23;
-            this._eventFilter.Items.AddRange(new object[] {
-            "All Event Types",
-            "Error",
-            "FailureAudit",
-            "Information",
-            "SuccessAudit",
-            "Warning"});
-            this._eventFilter.Location = new System.Drawing.Point(23, 149);
-            this._eventFilter.Name = "_eventFilter";
-            this._eventFilter.Size = new System.Drawing.Size(240, 29);
-            this._eventFilter.Sorted = true;
-            this._eventFilter.TabIndex = 4;
             // 
             // runOnStartup
             // 
@@ -361,7 +335,7 @@ namespace Jakkl
             this.logsSelectedBox.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.logsSelectedBox.Location = new System.Drawing.Point(26, 85);
             this.logsSelectedBox.Name = "logsSelectedBox";
-            this.logsSelectedBox.Size = new System.Drawing.Size(178, 23);
+            this.logsSelectedBox.Size = new System.Drawing.Size(209, 23);
             this.logsSelectedBox.TabIndex = 22;
             this.logsSelectedBox.Click += new System.EventHandler(this.metroTextBox1_Click_1);
             // 
@@ -371,7 +345,7 @@ namespace Jakkl
             this.logsCheckBox.Location = new System.Drawing.Point(26, 114);
             this.logsCheckBox.Name = "logsCheckBox";
             this.logsCheckBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.logsCheckBox.Size = new System.Drawing.Size(216, 95);
+            this.logsCheckBox.Size = new System.Drawing.Size(237, 95);
             this.logsCheckBox.Sorted = true;
             this.logsCheckBox.TabIndex = 25;
             this.logsCheckBox.Visible = false;
@@ -385,13 +359,55 @@ namespace Jakkl
             this.metroButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.metroButton1.IconColor = System.Drawing.SystemColors.ControlText;
             this.metroButton1.IconSize = 23;
-            this.metroButton1.Location = new System.Drawing.Point(210, 85);
+            this.metroButton1.Location = new System.Drawing.Point(241, 85);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(32, 23);
+            this.metroButton1.Size = new System.Drawing.Size(23, 23);
             this.metroButton1.TabIndex = 26;
             this.metroButton1.TabStop = false;
             this.metroButton1.Click += new System.EventHandler(this.ShowLogsCheckBox);
             this.metroButton1.MouseHover += new System.EventHandler(this.ShowLogsCheckBox);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconSize = 23;
+            this.iconPictureBox1.Location = new System.Drawing.Point(241, 148);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(23, 23);
+            this.iconPictureBox1.TabIndex = 28;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.MouseHover += new System.EventHandler(this.ShoweventFilters);
+            // 
+            // filterTextBox
+            // 
+            this.filterTextBox.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
+            this.filterTextBox.Location = new System.Drawing.Point(28, 148);
+            this.filterTextBox.Name = "filterTextBox";
+            this.filterTextBox.Size = new System.Drawing.Size(207, 23);
+            this.filterTextBox.TabIndex = 27;
+            // 
+            // _eventFilter
+            // 
+            this._eventFilter.FormattingEnabled = true;
+            this._eventFilter.Items.AddRange(new object[] {
+            "All Event Types",
+            "Error",
+            "FailureAudit",
+            "Information",
+            "SuccessAudit",
+            "Warning"});
+            this._eventFilter.Location = new System.Drawing.Point(28, 177);
+            this._eventFilter.Name = "_eventFilter";
+            this._eventFilter.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this._eventFilter.Size = new System.Drawing.Size(235, 69);
+            this._eventFilter.Sorted = true;
+            this._eventFilter.TabIndex = 29;
+            this._eventFilter.Visible = false;
+            this._eventFilter.MouseLeave += new System.EventHandler(this.Close_FiltersListBox);
             // 
             // JakklConfig
             // 
@@ -401,8 +417,11 @@ namespace Jakkl
             this.ClientSize = new System.Drawing.Size(293, 388);
             this.ContextMenu = this.contextMenu;
             this.ControlBox = false;
-            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.logsCheckBox);
+            this.Controls.Add(this._eventFilter);
+            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.filterTextBox);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.logsSelectedBox);
             this.Controls.Add(this.testConnButton);
             this.Controls.Add(this.pictureBox1);
@@ -414,10 +433,8 @@ namespace Jakkl
             this.Controls.Add(this._saveSettingsLabel);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.runOnStartup);
-            this.Controls.Add(this._eventFilter);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.monitorLogs);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.SaveButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -429,6 +446,7 @@ namespace Jakkl
             this.Load += new System.EventHandler(this.Config_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,6 +480,7 @@ namespace Jakkl
 			this.Hide();
 
             this.metroButton1.Image = IconChar.AngleDown.ToBitmap(22, Color.Black);
+            this.iconPictureBox1.Image = IconChar.AngleDown.ToBitmap(22, Color.Black);
 
             if (!string.IsNullOrEmpty(watchLog))
             {
@@ -475,19 +494,10 @@ namespace Jakkl
 			{
                 MetroFramework.Controls.MetroCheckBox checkBox = new MetroFramework.Controls.MetroCheckBox();
                 checkBox.Text = log.LogDisplayName;
-
-                MetroFramework.Controls.MetroLabel label =  new MetroLabel();
-                label.Text = log.LogDisplayName;
-
-                FlowLayoutPanel panel = new FlowLayoutPanel();
-                panel.FlowDirection = FlowDirection.TopDown;
-                panel.Controls.Add(checkBox);
-                panel.Controls.Add(label);
-                monitorLogs.Items.Add(panel);
                 logsCheckBox.Items.Add(log.LogDisplayName);
             }
 
-            monitorLogs.SelectedIndex = 0;
+            logsCheckBox.SelectedIndex = 0;
 
             NotifyIcon = new NotifyIconEx();
 			NotifyIcon.Icon = this.appIcon;
@@ -495,11 +505,7 @@ namespace Jakkl
 			NotifyIcon.Visible = true;
 			NotifyIcon.ContextMenu = this.contextMenu;
 			
-			monitorLogs.SelectedItem = watchLog;
-			if (eventFilter.Length > 0)
-				_eventFilter.SelectedItem = eventFilter;
-			else
-				_eventFilter.SelectedIndex = 0;
+			logsCheckBox.SelectedItem = watchLog;
 
 			// add event handlers
 			NotifyIcon.BalloonClick += new EventHandler(OnClickBalloon);
@@ -643,11 +649,7 @@ namespace Jakkl
 		private void cancelButton_Click(object sender, System.EventArgs e)
 		{
 			this.Hide();
-			monitorLogs.SelectedItem = watchLog;
-			if (eventFilter.Length > 0)
-				_eventFilter.SelectedItem = eventFilter;
-			else
-				_eventFilter.SelectedIndex = 0;
+			
 		}
 
 		private void SaveButton_Click(object sender, System.EventArgs e)
@@ -671,7 +673,7 @@ namespace Jakkl
 				else
 					RegHelper.SetRunOnStartup(localPath, true);				
 				
-				monitorLogs.SelectedItem = watchLog;
+				logsCheckBox.SelectedItem = watchLog;
 
 				NotifyIcon.Text = tipText+"("+watchLog+")";
 				StartWatch();
@@ -692,7 +694,7 @@ namespace Jakkl
 		{
 			bool comboOK = false;
 			eventFilter = _eventFilter.SelectedItem.ToString();
-			watchLog = monitorLogs.SelectedItem.ToString();
+			watchLog = logsCheckBox.SelectedItem.ToString();
 			switch (watchLog)
 			{
 				// Security can only have success or failure events
@@ -887,8 +889,23 @@ namespace Jakkl
 
         private void ShowLogsCheckBox(object sender, EventArgs e)
         {
+            this._eventFilter.Visible = false;
             this.metroButton1.Image = IconChar.AngleUp.ToBitmap(22, Color.Black);
             this.logsCheckBox.Visible = true;
         }
+
+        private void Close_FiltersListBox(object sender, EventArgs e)
+        {
+            this.iconPictureBox1.Image = IconChar.AngleDown.ToBitmap(22, Color.Black);
+            this._eventFilter.Visible = false;
+        }
+
+        private void ShoweventFilters(object sender, EventArgs e)
+        {
+            this.logsCheckBox.Visible = false;
+            this.iconPictureBox1.Image = IconChar.AngleUp.ToBitmap(22, Color.Black);
+            this._eventFilter.Visible = true;
+        }
+
     }
 }
