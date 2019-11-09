@@ -2,10 +2,10 @@
 .vs
 
 # Builds
-bin/**/*
+.\bin
 
 # Debug builds
-obj/**/*
+.\obj
 
 # Packages
-packages/**/*
+.\packages

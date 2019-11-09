@@ -8,10 +8,12 @@ Download the built agent from [here](https://github.com/Azayzel/syslog-windows-a
 
 ## Configure Jakkl
 
-![Jakkl - Syslog Windows Agent Running](https://github.com/Azayzel/syslog-windows-agent/blob/master/jakkl_syslog_windows.png "Jakkl Configuration")
-Set program startup, event sources to monitor, event types to monitor, syslog server IP, port, etc...
+|        |           |
+| ------------- |:-------------:|
+| ![Jakkl - Syslog Windows Agent Running](https://github.com/Azayzel/syslog-windows-agent/blob/master/jakkl_syslog_windows.png "Jakkl Configuration") | *Set program startup *Set event sources and types to monitor *Set Syslog Server IP/FQDN and Port |
+| **All Settings are saved to the registry** |
 
-All Settings are saved to the registry.
+
 
 # Agent In Action
 Coming Soon (GIF of messages from windows to Syslog Server)
