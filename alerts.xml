@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<alerts>
+  <alert time="3:09 PM" type="Error" category="(0)" source="Application" eventid="0" user="">The description for Event ID '0' in Source 'Application' cannot be found.  The local computer may not have the necessary registry information or message DLL files to display the message, or you may not have permission to access them.  The following information is part of the event:'Unable to log .NET application events. The source Jakkl was not found on computer ., but some or all event logs could not be searched.  To create the source, you need permission to read all event logs to make sure that the new source name is unique.  Inaccessible logs: Security.'</alert>
+  <alert time="3:14 PM" type="Error" category="(0)" source=".NET Runtime" eventid="1026" user="">Application: Jakl_FileManager.exe
+CoreCLR Version: 4.6.30527.2
+Description: The process was terminated due to an unhandled exception.
+Exception Info: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\joshl\source\repos\Jakl-FileManager\Jakl-FileManager\bin\x86\Debug\AppX\entrypoint\Jakl_FileManager.exe'. Access is denied.
+</alert>
+  <alert time="3:14 PM" type="Error" category="Application Crashing Events" source="Application Error" eventid="1000" user="DESKTOP-QVUMF60\joshl">Faulting application name: Jakl_FileManager.exe, version: 1.0.0.0, time stamp: 0x5d362223
+Faulting module name: KERNELBASE.dll, version: 10.0.22621.6133, time stamp: 0xdb4e0d32
+Exception code: 0xe0434352
+Fault offset: 0x0014e702
+Faulting process id: 0x0x18b48
+Faulting application start time: 0x0x1dcacdca9349318
+Faulting application path: C:\Users\joshl\source\repos\Jakl-FileManager\Jakl-FileManager\bin\x86\Debug\AppX\Jakl_FileManager.exe
+Faulting module path: C:\WINDOWS\System32\KERNELBASE.dll
+Report Id: a2868e1e-96c1-4ae9-b60e-da5624e698be
+Faulting package full name: 2C5726EB-AFCB-4DB5-AFBB-903D39DE8FFE_1.0.0.0_x86__fje2dntmbqe7c
+Faulting package-relative application ID: App</alert>
+  <alert time="3:19 PM" type="Error" category="(0)" source=".NET Runtime" eventid="1026" user="">Application: AadManager.exe
+CoreCLR Version: 4.6.30527.2
+Description: The process was terminated due to an unhandled exception.
+Exception Info: System.IO.FileLoadException: Could not load file or assembly 'C:\Users\joshl\source\repos\AadManager\AadManager\bin\x64\Debug\AppX\entrypoint\AadManager.exe'. Access is denied.
+</alert>
+  <alert time="3:19 PM" type="Error" category="Application Crashing Events" source="Application Error" eventid="1000" user="DESKTOP-QVUMF60\joshl">Faulting application name: AadManager.exe, version: 1.0.0.0, time stamp: 0x601d0adf
+Faulting module name: KERNELBASE.dll, version: 10.0.22621.6060, time stamp: 0x5dcc5c14
+Exception code: 0xe0434352
+Fault offset: 0x000000000006055c
+Faulting process id: 0x0x21e60
+Faulting application start time: 0x0x1dcacdd5c053ed6
+Faulting application path: C:\Users\joshl\source\repos\AadManager\AadManager\bin\x64\Debug\AppX\AadManager.exe
+Faulting module path: C:\WINDOWS\System32\KERNELBASE.dll
+Report Id: f245a4cc-1905-4651-80d6-9e1570d14c09
+Faulting package full name: 4F0F1495-7D10-4DDD-BE7D-10F108EA90ED_1.0.0.0_x64__fje2dntmbqe7c
+Faulting package-relative application ID: App</alert>
+  <alert time="3:19 PM" type="Error" category="(0)" source="DCOM" eventid="10010" user="DESKTOP-QVUMF60\joshl">The description for Event ID '10010' in Source 'DCOM' cannot be found.  The local computer may not have the necessary registry information or message DLL files to display the message, or you may not have permission to access them.  The following information is part of the event:'4F0F1495-7D10-4DDD-BE7D-10F108EA90ED_1.0.0.0_x64__fje2dntmbqe7c!App.AppX2qz7atwx8d5hfzmcc2persmq5pfffs0x.mca'</alert>
+</alerts>

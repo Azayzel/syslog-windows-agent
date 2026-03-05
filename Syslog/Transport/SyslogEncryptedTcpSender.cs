@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Net.Security;
 using System.Security;
+using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 
@@ -9,7 +10,7 @@ namespace Jakkl.Syslog.Transport
 	public class SyslogEncryptedTcpSender : SyslogTcpSender
 	{
 		protected int IOTimeout;
-		public Boolean IgnoreTLSChainErrors { get; private set; }
+		public bool IgnoreTLSChainErrors { get; private set; }
 
 		protected MessageTransfer _messageTransfer;
 		public override MessageTransfer messageTransfer
@@ -18,9 +19,7 @@ namespace Jakkl.Syslog.Transport
 			set
 			{
 				if (!value.Equals(MessageTransfer.OctetCounting) && transportStream is SslStream)
-				{
-					throw new SyslogTransportException("Non-Transparent-Framing can not be used with TLS transport");
-				}
+					throw new SyslogTransportException("Non-Transparent-Framing cannot be used with TLS transport");
 
 				_messageTransfer = value;
 			}
@@ -30,31 +29,29 @@ namespace Jakkl.Syslog.Transport
 		{
 			IOTimeout = timeout;
 			IgnoreTLSChainErrors = ignoreChainErrors;
-			startTLS();
+			StartTls();
 		}
 
 		public override void Reconnect()
 		{
 			base.Reconnect();
-			startTLS();
+			StartTls();
 		}
 
-		private void startTLS()
+		private void StartTls()
 		{
-			transportStream = new SslStream(tcpClient.GetStream(), false, new RemoteCertificateValidationCallback(ValidateServerCertificate))
+			transportStream = new SslStream(tcpClient.GetStream(), false, ValidateServerCertificate)
 			{
 				ReadTimeout = IOTimeout,
 				WriteTimeout = IOTimeout
 			};
 
-			// According to RFC 5425 we MUST support TLS 1.2, but this protocol version only implemented in framework 4.5 and Windows Vista+...
+			// Use system default TLS version (allows TLS 1.2 and 1.3)
 			((SslStream)transportStream).AuthenticateAsClient(
 				hostname,
 				null,
-				System.Security.Authentication.SslProtocols.Tls12,
-
-                false
-			);
+				SslProtocols.None, // Let the OS negotiate the best protocol
+				false);
 
 			if (!((SslStream)transportStream).IsEncrypted)
 				throw new SecurityException("Could not establish an encrypted connection");
@@ -64,14 +61,16 @@ namespace Jakkl.Syslog.Transport
 
 		private bool ValidateServerCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
 		{
-			if (sslPolicyErrors == SslPolicyErrors.None || (IgnoreTLSChainErrors && sslPolicyErrors == SslPolicyErrors.RemoteCertificateChainErrors))
+			if (sslPolicyErrors == SslPolicyErrors.None)
 				return true;
 
-			CertificateErrorHandler(String.Format("Certificate error: {0}", sslPolicyErrors));
+			if (IgnoreTLSChainErrors && sslPolicyErrors == SslPolicyErrors.RemoteCertificateChainErrors)
+				return true;
+
+			CertificateErrorHandler?.Invoke($"Certificate error: {sslPolicyErrors}");
 			return false;
 		}
 
-		// Quick and nasty way to avoid logging framework dependency
-		public static Action<string> CertificateErrorHandler = err => { };
+		public static Action<string> CertificateErrorHandler { get; set; }
 	}
 }

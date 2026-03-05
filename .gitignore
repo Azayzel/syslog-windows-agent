@@ -1,11 +1,28 @@
-﻿# VS Profile
-.vs
+# Build results
+bin/
+obj/
+Build/
 
-# Builds
-bin/**/*
+# NuGet packages
+packages/
 
-# Debug builds
-obj/**/*
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstats
 
-# Packages
-packages/**/*
+# JetBrains Rider / IntelliJ
+.idea/
+
+# VS Code
+.vscode/
+
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Debug logs
+*.log
