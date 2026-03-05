@@ -11,3 +11,7 @@ D:\Development\SMX-Internal\Jakl\obj\Debug\Jakkl.csproj.CoreCompileInputs.cache
 D:\Development\SMX-Internal\Jakl\obj\Debug\Jakkl.csproj.CopyComplete
 D:\Development\SMX-Internal\Jakl\obj\Debug\Jakkl.exe
 D:\Development\SMX-Internal\Jakl\obj\Debug\Jakkl.pdb
+G:\Repos\syslog-windows-agent\bin\Debug\Jakkl.exe
+G:\Repos\syslog-windows-agent\bin\Debug\FontAwesome.Sharp.dll
+G:\Repos\syslog-windows-agent\bin\Debug\MetroFramework.dll
+G:\Repos\syslog-windows-agent\bin\Debug\MetroFramework.Fonts.dll

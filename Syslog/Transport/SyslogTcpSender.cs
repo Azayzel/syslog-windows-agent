@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading;
 using Jakkl.Syslog.Serialization;
 
 namespace Jakkl.Syslog.Transport
 {
-	public enum MessageTransfer {
-		OctetCounting		= 0,
-		NonTransparentFraming	= 1
+	public enum MessageTransfer
+	{
+		OctetCounting = 0,
+		NonTransparentFraming = 1
 	}
 
 	public class SyslogTcpSender : ISyslogMessageSender, IDisposable
 	{
-		protected String hostname;
+		protected string hostname;
 		protected int port;
 
-		protected TcpClient tcpClient = null;
-		protected Stream transportStream = null;
+		protected TcpClient tcpClient;
+		protected Stream transportStream;
 
 		public virtual MessageTransfer messageTransfer { get; set; }
 		public byte trailer { get; set; }
@@ -30,9 +30,7 @@ namespace Jakkl.Syslog.Transport
 			this.port = port;
 
 			if (shouldAutoConnect)
-			{
 				Connect();
-			}
 
 			messageTransfer = MessageTransfer.OctetCounting;
 			trailer = 10; // LF
@@ -43,10 +41,8 @@ namespace Jakkl.Syslog.Transport
 			try
 			{
 				tcpClient = new TcpClient(hostname, port);
-                
 				transportStream = tcpClient.GetStream();
-                File.AppendAllText("C:\\Jakkl_log.txt", "Connected: " + tcpClient.Connected);
-            }
+			}
 			catch
 			{
 				Disconnect();
@@ -82,12 +78,10 @@ namespace Jakkl.Syslog.Transport
 
 		protected void Send(SyslogMessage message, ISyslogMessageSerializer serializer, bool flush = true)
 		{
-			if(transportStream == null)
-			{
+			if (transportStream == null)
 				throw new IOException("No transport stream exists");
-			}
 
-			using (MemoryStream memoryStream = new MemoryStream())
+			using (var memoryStream = new MemoryStream())
 			{
 				var datagramBytes = serializer.Serialize(message);
 
@@ -101,9 +95,7 @@ namespace Jakkl.Syslog.Transport
 				memoryStream.Write(datagramBytes, 0, datagramBytes.Length);
 
 				if (messageTransfer.Equals(MessageTransfer.NonTransparentFraming))
-				{
-					memoryStream.WriteByte(trailer); // LF
-				}
+					memoryStream.WriteByte(trailer);
 
 				transportStream.Write(memoryStream.GetBuffer(), 0, (int)memoryStream.Length);
 			}
@@ -114,10 +106,8 @@ namespace Jakkl.Syslog.Transport
 
 		public void Send(IEnumerable<SyslogMessage> messages, ISyslogMessageSerializer serializer)
 		{
-			foreach (SyslogMessage message in messages)
-			{
+			foreach (var message in messages)
 				Send(message, serializer, false);
-			}
 
 			if (!(transportStream is NetworkStream))
 				transportStream.Flush();

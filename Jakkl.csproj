@@ -1,184 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <ProjectType>Local</ProjectType>
-    <ProductVersion>7.10.3077</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F2077FE0-A3AE-4AF6-A546-16ACD5C00CA6}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>App.ico</ApplicationIcon>
-    <AssemblyKeyContainerName />
-    <AssemblyName>Jakkl</AssemblyName>
-    <AssemblyOriginatorKeyFile />
-    <DefaultClientScript>JScript</DefaultClientScript>
-    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
-    <DefaultTargetSchema>IE50</DefaultTargetSchema>
-    <DelaySign>false</DelaySign>
     <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyName>Jakkl</AssemblyName>
     <RootNamespace>Jakkl</RootNamespace>
-    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <StartupObject />
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>0.0</OldToolsVersion>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
+    <Version>2.0.0</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <Title>Jakkl Event Monitoring</Title>
+    <Description>Real-time Windows Event Monitoring and Syslog forwarding agent</Description>
+    <Product>Jakkl - Syslog Windows Agent</Product>
+    <Copyright>2019-2026 Josh Lavely</Copyright>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>bin\Debug\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile />
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile />
-    <DebugSymbols>true</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
-    <NoStdLib>false</NoStdLib>
-    <NoWarn />
-    <Optimize>false</Optimize>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>full</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>bin\Release\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile />
-    <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile />
-    <DebugSymbols>false</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
-    <NoStdLib>false</NoStdLib>
-    <NoWarn />
-    <Optimize>true</Optimize>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>none</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="AdamsLair.WinForms, Version=1.1.17.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\AdamsLair.WinForms.1.1.17\lib\net45\AdamsLair.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="CheckComboBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Common.CheckComboBox.1.0.0\lib\CheckComboBox.dll</HintPath>
-    </Reference>
-    <Reference Include="FB.Mvc.CheckBoxList, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\CheckboxList.Mvc.FB.1.0.0\lib\net45\FB.Mvc.CheckBoxList.dll</HintPath>
-    </Reference>
-    <Reference Include="FontAwesome.Sharp, Version=5.8.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\FontAwesome.Sharp.5.8.3\lib\net40\FontAwesome.Sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
-    </Reference>
-    <Reference Include="PopupControl, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\AdamsLair.WinForms.PopupControl.1.0.1\lib\net40\PopupControl.dll</HintPath>
-    </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="System">
-      <Name>System</Name>
-    </Reference>
-    <Reference Include="System.Data">
-      <Name>System.Data</Name>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <Name>System.Drawing</Name>
-    </Reference>
-    <Reference Include="System.Windows.Forms">
-      <Name>System.Windows.Forms</Name>
-    </Reference>
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml">
-      <Name>System.XML</Name>
-    </Reference>
-    <Reference Include="WindowsBase" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.0" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Config.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NotifyIconEx.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="RegHelper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SysLogMessage.cs" />
-    <Compile Include="Syslog\Facility.cs" />
-    <Compile Include="Syslog\Serialization\ISyslogMessageSerializer.cs" />
-    <Compile Include="Syslog\Serialization\SyslogLocalMessageSerializer.cs" />
-    <Compile Include="Syslog\Serialization\SyslogMessageSerializerBase.cs" />
-    <Compile Include="Syslog\Serialization\SyslogMessageSerializerExtensions.cs" />
-    <Compile Include="Syslog\Serialization\SyslogRfc3164MessageSerializer.cs" />
-    <Compile Include="Syslog\Serialization\SyslogRfc5424MessageSerializer.cs" />
-    <Compile Include="Syslog\Severity.cs" />
-    <Compile Include="Syslog\StructuredDataElement.cs" />
-    <Compile Include="Syslog\SyslogMessage.cs" />
-    <Compile Include="Syslog\SyslogNetException.cs" />
-    <Compile Include="Syslog\Transport\ISyslogMessageSender.cs" />
-    <Compile Include="Syslog\Transport\SyslogEncryptedTcpSender.cs" />
-    <Compile Include="Syslog\Transport\SyslogLocalSender.cs" />
-    <Compile Include="Syslog\Transport\SyslogTcpSender.cs" />
-    <Compile Include="Syslog\Transport\SyslogTransportException.cs" />
-    <Compile Include="Syslog\Transport\SyslogUdpSender.cs" />
+    <EmbeddedResource Include="events.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="App.ico" />
     <Content Include="jakkl_sm.png" />
     <Content Include="jakkl_syslog_windows.png" />
-    <EmbeddedResource Include="Config.resx">
-      <DependentUpon>Config.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="events.ico" />
-    <EmbeddedResource Include="NotifyIconEx.resx">
-      <DependentUpon>NotifyIconEx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <None Include=".gitignore" />
-    <None Include="app.config" />
-    <None Include="CheckboxList.mvc.readme" />
-    <None Include="packages.config" />
-    <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Build\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent />
-    <PostBuildEvent />
-  </PropertyGroup>
+
 </Project>

@@ -1,9 +1,7 @@
-﻿using System;
-using System.Runtime.Serialization;
+using System;
 
 namespace Jakkl.Syslog
 {
-	[Serializable]
 	public class SyslogNetException : Exception
 	{
 		public SyslogNetException()
@@ -15,12 +13,6 @@ namespace Jakkl.Syslog
 		}
 
 		public SyslogNetException(string message, Exception inner) : base(message, inner)
-		{
-		}
-
-		protected SyslogNetException(
-			SerializationInfo info,
-			StreamingContext context) : base(info, context)
 		{
 		}
 	}
